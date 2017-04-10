@@ -3,6 +3,7 @@
 ###### Stack
 
 * React Native
+* React Router (react-router-native)
 * Redux
 * Reselect
 * Redux Saga
