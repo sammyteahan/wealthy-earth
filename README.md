@@ -16,7 +16,7 @@ For now, this app will display helpful information about crops. When to plant th
 
 ###### Todo
 
-- [] Mocks
-- [] Crops/Seasons state
-- [] Designs (Looking mostly for icons)
-- [] Setup test suite
+- [ ] Mocks
+- [ ] Crops/Seasons state
+- [ ] Designs (Looking mostly for icons)
+- [ ] Setup test suite
