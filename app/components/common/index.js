@@ -1,4 +1,5 @@
 import Header, { DefaultHeader } from './Header';
+import NavLink from './NavLink';
 import Icon from './Icon';
 
 export {
@@ -8,4 +9,7 @@ export {
 
   // Icon Components
   Icon,
+
+  // Link Components
+  NavLink,
 };

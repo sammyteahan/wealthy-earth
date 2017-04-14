@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 
-import Icon from './common/Icon';
-import { DefaultHeader } from './common/Header';
+import { Icon, DefaultHeader } from '../common';
 
 const Container = styled.View`
   flex: 1;
@@ -21,7 +20,7 @@ const Home = () => (
   <Container>
     <DefaultHeader />
     <Centered>
-      <Icon type="EvilIcons" name="envelope" size={72} color={'steelblue'} />
+      <Icon type="FontAwesome" name="search" size={72} color={'steelblue'} />
     </Centered>
   </Container>
 );

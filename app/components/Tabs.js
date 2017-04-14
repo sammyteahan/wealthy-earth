@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native';
 import { Link } from 'react-router-native';
 import styled from 'styled-components/native';
 
-import { Icon } from './common';
+import { NavLink } from './common';
 
 const TabContainer = styled.View`
   flex: 1;
@@ -18,12 +18,51 @@ const TabContainer = styled.View`
  */
 const Tabs = () => (
   <TabContainer>
-    <Link to="/" component={TouchableOpacity} activeOpacity={0.2} >
-      <Icon type="EvilIcons" name="envelope" size={40} color={'#585858'} />
-    </Link>
-    <Link to="/dashboard" component={TouchableOpacity}>
-      <Icon type="EvilIcons" name="chart" size={40} color={'#585858'} />
-    </Link>
+    <NavLink
+      exact
+      to="/spring"
+      type="FontAwesome"
+      name="tint"
+      size={32}
+      color={'#585858'}
+      activeColor={'steelblue'}
+    />
+    <NavLink
+      exact
+      to="/summer"
+      type="FontAwesome"
+      name="sun-o"
+      size={32}
+      color={'#585858'}
+      activeColor={'steelblue'}
+    />
+    <NavLink
+      exact
+      to="/"
+      type="FontAwesome"
+      name="search"
+      size={32}
+      color={'#585858'}
+      activeColor={'steelblue'}
+    />
+    <NavLink
+      exact
+      to="/fall"
+      type="FontAwesome"
+      name="leaf"
+      size={32}
+      color={'#585858'}
+      activeColor={'steelblue'}
+    />
+    <NavLink
+      exact
+      to="/winter"
+      type="FontAwesome"
+      name="snowflake-o"
+      size={32}
+      color={'#585858'}
+      activeColor={'steelblue'}
+    />
   </TabContainer>
 );
 

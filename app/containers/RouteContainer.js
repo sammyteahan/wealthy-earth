@@ -2,15 +2,18 @@ import React from 'react';
 import { NativeRouter, Route, Switch } from 'react-router-native';
 
 import AppContainer from './AppContainer';
-import Home from '../components/Home';
 import Dashboard from '../components/Dashboard'
+import HomeContainer from '../containers/HomeContainer';
+import CropListContainer from '../containers/CropListContainer';
 
 const RouteContainer = () => (
   <NativeRouter>
     <AppContainer>
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/dashboard" exact component={Dashboard} />
+        <Route path="/" exact component={HomeContainer} />
+        <Route path="/:season" exact component={CropListContainer}>
+          <Route path="/:id" exact component={HomeContainer} />
+        </Route>
       </Switch>
     </AppContainer>
   </NativeRouter>
