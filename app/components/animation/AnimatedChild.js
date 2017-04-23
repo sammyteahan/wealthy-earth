@@ -20,48 +20,60 @@ class AnimatedChild extends Component {
     }
   }
 
+  get animatedStyle() {
+    const { animation, direction } = this.props;
+
+    if (direction === 'left' || direction === 'right') {
+      return {
+        backgroundColor: '#fff',
+        position: 'absolute',
+        top: UIVariables.Header.Height,
+        bottom: 0,
+        width: '100%',
+        [direction]: animation.interpolate({
+          inputRange: [0, 1],
+          outputRange: ['100%', '0%'],
+        }),
+      };
+    }
+
+    return {
+      backgroundColor: '#fff',
+      position: 'absolute',
+      top: UIVariables.Header.Height,
+      bottom: 0,
+      width: '100%',
+      [direction]: animation.interpolate({
+        inputRange: [0, 1],
+        outputRange: ['100%', '10%'],
+      }),
+    };
+  }
+
   render() {
-    const { animation, children } = this.props;
+    const { children } = this.props;
     const { previousChildren } = this.state;
 
     return (
       <Animated.View
-        style={{
-          backgroundColor: '#fff',
-          position: 'absolute',
-          top: UIVariables.Header.Height,
-          bottom: 0,
-          width: '100%',
-          left: animation.interpolate({
-            inputRange: [0, 1],
-            outputRange: ['100%', '0%'],
-          }),
-        }}
+        style={this.animatedStyle}
       >
-        <Animated.View
-          style={{
-            position: 'absolute',
-            top: 0,
-            bottom: 0,
-            width: '100%',
-            left: animation.interpolate({
-              inputRange: [0, 1],
-              outputRange: [0, 1],
-            }),
-          }}
-        >
-          {previousChildren || children}
-        </Animated.View>
+        {previousChildren || children}
       </Animated.View>
     );
   }
 }
+
+AnimatedChild.defaultProps = {
+  direction: 'left',
+};
 
 AnimatedChild.propTypes = {
   children: PropTypes.node.isRequired,
   animation: PropTypes.object.isRequired,
   atParent: PropTypes.bool.isRequired,
   animating: PropTypes.bool.isRequired,
+  direction: PropTypes.string,
 };
 
 export { AnimatedChild as default };

@@ -1,39 +1,46 @@
 import React, { Component, PropTypes } from 'react';
-import { Animated, ScrollView } from 'react-native';
+import { Animated } from 'react-native';
 
 import UIVariables from '../../constants/uiVariables';
 
 class AnimatedParent extends Component {
+  get animatedStyle() {
+    const { animation, direction } = this.props;
+
+    if (direction === 'left' || direction === 'right') {
+      return {
+        flex: 1,
+        [direction]: animation.interpolate({
+          inputRange: [0, 1],
+          outputRange: ['0%', '-25%'],
+        }),
+      }
+    }
+
+    return { flex: 1 };
+  }
+
   render() {
-    const { animation, children } = this.props;
+    const { children } = this.props;
 
     return (
       <Animated.View
-        style={{
-          position: 'absolute',
-          padding: 10,
-          backgroundColor: '#fff',
-          top: UIVariables.Header.Height,
-          bottom: 0,
-          width: '100%',
-          height: '100%',
-          left: animation.interpolate({
-            inputRange: [0, 1],
-            outputRange: ['0%', '-25%'],
-          }),
-        }}
+        style={this.animatedStyle}
       >
-        <ScrollView>
-          {children}
-        </ScrollView>
+        {children}
       </Animated.View>
     );
   }
 }
 
+AnimatedParent.defaultProps = {
+  direction: 'left',
+};
+
 AnimatedParent.propTypes = {
   children: PropTypes.node.isRequired,
   animation: PropTypes.object.isRequired,
+  direction: PropTypes.string,
 };
 
 export { AnimatedParent as default };

@@ -1,7 +1,5 @@
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
 
-import { Link } from 'react-router-native';
 import styled from 'styled-components/native';
 
 import { NavLink } from './common';
@@ -12,15 +10,11 @@ const TabContainer = styled.View`
   justify-content: space-around;
 `;
 
-/**
- * @todo swap out icon for component that can understand a match prop
- * and apply additional styles
- */
 const Tabs = () => (
   <TabContainer>
     <NavLink
       exact
-      to="/spring"
+      to="/seasons/spring"
       type="FontAwesome"
       name="tint"
       size={32}
@@ -29,9 +23,18 @@ const Tabs = () => (
     />
     <NavLink
       exact
-      to="/summer"
+      to="/seasons/summer"
       type="FontAwesome"
       name="sun-o"
+      size={32}
+      color={'#585858'}
+      activeColor={'steelblue'}
+    />
+    <NavLink
+      exact
+      to="/dashboard"
+      type="FontAwesome"
+      name="pie-chart"
       size={32}
       color={'#585858'}
       activeColor={'steelblue'}
@@ -47,7 +50,7 @@ const Tabs = () => (
     />
     <NavLink
       exact
-      to="/fall"
+      to="/seasons/fall"
       type="FontAwesome"
       name="leaf"
       size={32}
@@ -56,7 +59,7 @@ const Tabs = () => (
     />
     <NavLink
       exact
-      to="/winter"
+      to="/seasons/winter"
       type="FontAwesome"
       name="snowflake-o"
       size={32}
