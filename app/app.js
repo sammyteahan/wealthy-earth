@@ -1,9 +1,3 @@
-/**
- * I like this solution better. It seems more trivial,
- * but let's get things working first before preferences
- * kick in
- */
-
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
