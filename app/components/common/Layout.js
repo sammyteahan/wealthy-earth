@@ -9,6 +9,7 @@ const Col = styled.View`
 `;
 
 const Content = styled.View`
+  flex: 1;
   padding: 10;
 `;
 

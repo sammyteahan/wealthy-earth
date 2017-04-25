@@ -9,15 +9,27 @@ class AnimatedParent extends Component {
 
     if (direction === 'left' || direction === 'right') {
       return {
-        flex: 1,
+        position: 'absolute',
+        backgroundColor: '#fff',
+        top: UIVariables.Header.Height,
+        bottom: 0,
+        width: '100%',
+        height: '100%',
         [direction]: animation.interpolate({
           inputRange: [0, 1],
           outputRange: ['0%', '-25%'],
         }),
-      }
+      };
     }
 
-    return { flex: 1 };
+    return {
+      position: 'absolute',
+      backgroundColor: '#fff',
+      top: UIVariables.Header.Height,
+      bottom: 0,
+      width: '100%',
+      height: '100%',
+    };
   }
 
   render() {
