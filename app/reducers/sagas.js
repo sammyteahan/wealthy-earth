@@ -1,7 +1,8 @@
 import { fork } from 'redux-saga/effects';
 
 function* sagas() {
-  yield* [];
+  yield* [
+  ];
 }
 
 export { sagas as default };

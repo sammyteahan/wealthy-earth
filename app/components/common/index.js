@@ -1,22 +1,40 @@
+import { Centered, Col, Content, Row } from './Layout';
+import Button, { Link, PrimaryButton } from './Button';
 import Header, { DefaultHeader } from './Header';
-import ListGroup, { ListGroupItem, ListGroupView } from './ListGroup';
-import { Content, Row, Col, Centered } from './Layout'
 import NavLink from './NavLink';
-import Icon from './Icon';
+import ListGroup, { ListGroupItem, ListGroupView } from './ListGroup';
+import BuiltIcon from './Icon';
+import Text, {
+  Del,
+  Em,
+  H1,
+  H2,
+  H3,
+  H4,
+  P,
+  Strong,
+  U,
+} from './Text';
 
 export {
-  // Layout Components
-  Row,
-  Col,
-  Content,
-  Centered,
+  // Button Components
+  Button,
+  Link,
+  PrimaryButton,
+
 
   // Header Components
   DefaultHeader,
   Header,
 
   // Icon Components
-  Icon,
+  BuiltIcon,
+
+  // Layout Components
+  Centered,
+  Col,
+  Content,
+  Row,
 
   // Link Components
   NavLink,
@@ -25,4 +43,16 @@ export {
   ListGroup,
   ListGroupItem,
   ListGroupView,
+
+  // Text Components
+  Del,
+  Em,
+  H1,
+  H2,
+  H3,
+  H4,
+  P,
+  Strong,
+  Text,
+  U,
 };

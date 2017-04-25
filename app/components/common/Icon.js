@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import EvilIcon from 'react-native-vector-icons/EvilIcons';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 
-class Icon extends Component {
+class BuiltIcon extends Component {
   get evilIcon() {
     return this.props.type === 'EvilIcons';
   }
@@ -37,11 +37,11 @@ class Icon extends Component {
   }
 }
 
-Icon.propTypes = {
+BuiltIcon.propTypes = {
   type: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   size: PropTypes.number.isRequired,
 };
 
-export { Icon as default };
+export { BuiltIcon as default };

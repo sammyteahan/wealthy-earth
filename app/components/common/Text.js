@@ -2,18 +2,20 @@ import { Platform } from 'react-native';
 import styled from 'styled-components/native';
 
 /**
- * Text
+ * Text -- The Root of All Things
  */
+
 const Text = styled.Text`
   font-size: 15;
   line-height: ${Platform.select({ ios: 17, android: 20 })};
-  font-family: ${Platform.select({ ios: 'Open Sans', andriod: 'opensans_regular' })};
+  font-family: ${Platform.select({ ios: 'Open Sans', android: 'opensans_regular' })};
   color: #333;
 `;
 
 /**
- * Headings
+ * Heading Components
  */
+
 const HBase = styled(Text)`
   font-weight: bold;
   margin-bottom: 10;
@@ -42,8 +44,9 @@ const H4 = styled(HBase)`
 `;
 
 /**
- * Body components
+ * Body Components
  */
+
 const P = styled(Text)`
   margin-bottom: 10;
 `;
