@@ -43,7 +43,7 @@ const DefaultHeader = ({ title }) => (
 );
 
 Header.defaultProps = {
-  title: 'BUILT',
+  title: 'Wealthy Earth',
 };
 
 Header.propTypes = {
@@ -52,7 +52,7 @@ Header.propTypes = {
 };
 
 DefaultHeader.defaultProps = {
-  title: 'BUILT',
+  title: 'Wealthy Earth',
 };
 
 DefaultHeader.propTypes = {

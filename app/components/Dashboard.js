@@ -28,7 +28,7 @@ class InternalContainer extends Component {
     return (
       <Container>
         <AnimatedParentHeader animation={animation}>
-          <DefaultHeader url={match.url} title={'BUILT'} />
+          <DefaultHeader url={match.url} title="Wealthy Earth" />
         </AnimatedParentHeader>
         <AnimatedChildHeader
           animation={animation}
