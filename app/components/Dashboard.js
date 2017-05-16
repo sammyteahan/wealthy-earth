@@ -30,24 +30,11 @@ class InternalContainer extends Component {
         <AnimatedParentHeader animation={animation}>
           <DefaultHeader url={match.url} title="Wealthy Earth" />
         </AnimatedParentHeader>
-        <AnimatedChildHeader
-          animation={animation}
-          atParent={match.isExact}
-          animating={animating}
-        >
+        <AnimatedChildHeader animation={animation} atParent={match.isExact} animating={animating}>
           <Switch location={location}>
-            <Route
-              path="/dashboard/graphs"
-              render={props => <Header title="GRAPHS" {...props} />}
-            />
-            <Route
-              path="/dashboard/notifications"
-              render={props => <Header title="NOTIFICATIONS" {...props} />}
-            />
-            <Route
-              path="/dashboard/common"
-              render={props => <Header title="SHOWCASE" {...props} />}
-            />
+            <Route path="/dashboard/graphs" render={props => <Header title="GRAPHS" {...props} />} />
+            <Route path="/dashboard/notifications" render={props => <Header title="NOTIFICATIONS" {...props} />} />
+            <Route path="/dashboard/common" render={props => <Header title="SHOWCASE" {...props} />} />
           </Switch>
         </AnimatedChildHeader>
         <AnimatedParent animation={animation}>

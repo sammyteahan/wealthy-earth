@@ -19,6 +19,11 @@ const Footer = styled.View`
   padding: 20;
 `;
 
+/**
+ * This is prolly a crazy idea, but what if this was
+ * wrapped in the animated container? I see some immediate
+ * problems, but would a layout like that be worth the time?
+ */
 class AppContainer extends Component {
   render() {
     return (

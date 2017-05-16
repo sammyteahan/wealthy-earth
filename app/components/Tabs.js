@@ -38,6 +38,14 @@ const Tabs = () => (
       color={'#585858'}
       activeColor={'steelblue'}
     />
+    <NavLink
+      to="/season/fall"
+      type="FontAwesome"
+      name="leaf"
+      size={32}
+      color={'#585858'}
+      activeColor={'steelblue'}
+    />
   </TabContainer>
 );
 
